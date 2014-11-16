@@ -1,0 +1,119 @@
+svm_type c_svc
+nr_class 2
+num_kernels 26
+-t 4 -w 3.2340655259360336 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_0.test
+-t 4 -w 1.1724133753326884 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_1.test
+-t 4 -w 3.1047681561279723 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_2.test
+-t 4 -w 2.4015476004007583 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_3.test
+-t 4 -w 1.7802751903835421 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_4.test
+-t 4 -w 0.43520220652236519 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_5.test
+-t 4 -w 0.41188757982203311 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_6.test
+-t 4 -w 1.5949537326957057 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_7.test
+-t 4 -w 1.8237018521658737 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_8.test
+-t 4 -w 2.8437325680510459 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_9.test
+-t 4 -w 2.2467404027126801 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_10.test
+-t 4 -w 2.9707338661960732 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_11.test
+-t 4 -w 2.8427594770060254 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_12.test
+-t 4 -w 0.54549726772633189 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_13.test
+-t 4 -w 1.0579325215147048 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_14.test
+-t 4 -w 2.7868390690318212 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_15.test
+-t 4 -w 1.6798617112820922 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_16.test
+-t 4 -w 1.3327269582226131 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_17.test
+-t 4 -w 0.42771192688839654 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_18.test
+-t 4 -w 0.36265559384071488 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_19.test
+-t 4 -w 1.1581301639724475 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_20.test
+-t 4 -w 1.638419933612113 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_21.test
+-t 4 -w 1.7764412761096837 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_22.test
+-t 4 -w 1.5159905040871102 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_23.test
+-t 4 -w 2.6576099686812276 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_24.test
+-t 4 -w 2.1939963681886536 -u 1.2466340879624984 -f Example/Linear/Classification/PrecomputedKernels/kernel_25.test
+total_sv 85
+rho -0.0051572377290909528
+label -1 1
+nr_sv 41 44
+SV
+10 0:0 
+8.0518746610624845 0:31 
+10 0:37 
+10 0:45 
+10 0:57 
+7.9455679408832385 0:62 
+10 0:65 
+7.2997272684741041 0:69 
+10 0:72 
+10 0:83 
+10 0:87 
+10 0:98 
+10 0:101 
+10 0:103 
+3.4967448886805297 0:108 
+3.4779229988327343 0:109 
+10 0:112 
+10 0:118 
+10 0:121 
+10 0:130 
+10 0:131 
+2.1452357777049817 0:132 
+10 0:135 
+10 0:136 
+10 0:141 
+10 0:150 
+10 0:161 
+10 0:166 
+10 0:168 
+1.6048126242332117 0:169 
+10 0:172 
+6.3833314651257043 0:174 
+10 0:175 
+10 0:178 
+2.7904418945206877 0:184 
+10 0:185 
+10 0:189 
+10 0:194 
+3.5243276560099805 0:195 
+10 0:207 
+10 0:212 
+-0.44788647367003809 0:1 
+-3.5688778216781416 0:6 
+-4.0857554818035187 0:7 
+-10 0:10 
+-10 0:14 
+-10 0:18 
+-10 0:22 
+-10 0:26 
+-3.1730236677143941 0:27 
+-2.4441864926104562 0:33 
+-10 0:39 
+-5.0834822033850928 0:40 
+-1.609517918296518 0:51 
+-2.3076564444085701 0:58 
+-10 0:63 
+-6.4262860128684096 0:64 
+-10 0:66 
+-10 0:68 
+-7.2394670557780687 0:70 
+-10 0:74 
+-10 0:79 
+-10 0:80 
+-7.9057595065996686 0:96 
+-10 0:97 
+-10 0:99 
+-10 0:113 
+-4.2027632236206234 0:115 
+-10 0:117 
+-9.1797285746438355 0:119 
+-10 0:122 
+-9.8022128391847758 0:123 
+-10 0:129 
+-6.8032387424130389 0:133 
+-10 0:152 
+-10 0:162 
+-10 0:173 
+-2.4401447168525046 0:179 
+-10 0:182 
+-10 0:186 
+-10 0:192 
+-10 0:206 
+-10 0:208 
+-10 0:210 
+-10 0:211 

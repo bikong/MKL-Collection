@@ -1,0 +1,9 @@
+Directory toy contain kernelfile, training and test data. Regression data is from dataset housing (which is available on http://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/). Data is divided in the ratio of 4:1. Four parts are used for training and remaining one part is used for testing 
+Kernels in this case will be computed on the fly. In order to train fire the following command
+svm-train -s 3 -h 0 -m 400 -o 1.1 -a 10 -c 10.0 -l 1.0 -f 0 -j 1 -g 3 -k Example/Linear/Regression/toy/kernelfile Example/Linear/Regression/toy/y_train Example/Linear/Regression/toy/model_file
+Above command will generate a model_file in Example/Linear/Regression/toy/ directory
+In order to get the calssification accuracy use the following command:
+svm-predict Example/Linear/Regression/toy/y_test Example/Linear/Regression/toy/model_file Example/Linear/Regression/toy/prediction  
+Above command will generate a prediction file in Example/Linear/Regression/toy/ directory
+
+NOTE: All paths given in this README are relative to $PATH_TO_SMO-MKL directory 

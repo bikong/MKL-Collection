@@ -1,0 +1,8 @@
+Directory contains a datafile 'heart_scale', 'heart_scale_test' and modelfile.
+model_file is obtained using the following command:
+svm-train-prod -t 1 -s 0 -h 0 -u 400 -m 200 -o 2.0 -c 10.0 -x 3 -l 1.0 -f 1 -j 1 -g 3 Example/Product/Classification/heart_scale Example/Product/Classification/model_file
+NOTE: In the above command observe the option '-x'. It means 3 features of heart_scale are combined to make one base kernels. Dimension of heart_scale is 13, it means total number of base kernels are 5.
+
+In order to get the calssification accuracy use the following command:
+svm-predict-prod Example/Product/Classification/heart_scale_test Example/Product/Classification/model_file Example/Product/Classification/prediction
+NOTE: All paths given in this README are relative to $PATH_TO_SMO-MKL directory 

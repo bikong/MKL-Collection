@@ -1,0 +1,55 @@
+#You must ensure nmake.exe, cl.exe, link.exe are in system path.
+#VCVARS32.bat
+#Under dosbox prompt
+#nmake -f Makefile.win
+
+# modification for windows - timer.obj generated and the portion for svm-toy removed
+
+PYTHON_INC = c:\python26\include
+PYTHON_LIB = c:\python26\libs\python26.lib
+##########################################
+CXX = cl.exe
+CFLAGS = -nologo -O2 -EHsc -I. -D __WIN32__ -D _CRT_SECURE_NO_DEPRECATE
+TARGET = windows
+
+all: $(TARGET)\svm-train.exe $(TARGET)\svm-predict.exe $(TARGET)\svm-scale.exe $(TARGET)\svm-train-prod.exe $(TARGET)\svm-predict-prod.exe
+
+python: $(TARGET)\python\svmc.pyd
+
+$(TARGET)\svm-predict.exe: svm.h svm-predict.c svm.obj timer.obj
+    $(CXX) $(CFLAGS) svm-predict.c svm.obj timer.obj -Fe$(TARGET)\svm-predict.exe
+
+$(TARGET)\svm-predict-prod.exe: svm.h svm-predict.c svm-prod.obj timer.obj
+    $(CXX) $(CFLAGS) svm-predict.c svm-prod.obj timer.obj -Fe$(TARGET)\svm-predict-prod.exe
+
+
+$(TARGET)\svm-train.exe: svm.h svm-train.c svm.obj timer.obj
+    $(CXX) $(CFLAGS) svm-train.c svm.obj timer.obj -Fe$(TARGET)\svm-train.exe
+
+$(TARGET)\svm-train-prod.exe: svm.h svm-train.c svm-prod.obj timer.obj
+    $(CXX) $(CFLAGS) svm-train.c svm-prod.obj timer.obj -Fe$(TARGET)\svm-train-prod.exe
+
+
+$(TARGET)\svm-scale.exe: svm.h svm-scale.c
+    $(CXX) $(CFLAGS) svm-scale.c timer.obj -Fe$(TARGET)\svm-scale.exe
+
+#$(TARGET)\svm-toy.exe: svm.h svm.obj svm-toy\windows\svm-toy.cpp
+#	$(CXX) $(CFLAGS) svm-toy\windows\svm-toy.cpp svm.obj user32.lib gdi32.lib comdlg32.lib  -Fe$(TARGET)\svm-toy.exe
+
+svm.obj: svm.cpp svm.h timer.obj
+    $(CXX) $(CFLAGS) -c svm.cpp
+
+svm-prod.obj: svm-prod.cpp svm.h timer.obj
+    $(CXX) $(CFLAGS) -c svm-prod.cpp	
+
+timer.obj: timer.cpp timer.hpp
+    $(CXX) $(CFLAGS) -c timer.cpp
+    
+$(TARGET)\python\svmc.pyd: python\svmc_wrap.c svm.obj $(PYTHON_LIB)
+    $(CXX) $(CFLAGS) -I$(PYTHON_INC) -LD $** -Fe$(TARGET)\python\svmc.pyd
+# $** means all dependencies
+
+clean:
+    -erase /Q *.obj $(TARGET)\. $(TARGET)\python\. 
+
+

@@ -1,0 +1,10 @@
+Directory PrecomputedKernels contain a kernelfile, train/test labels, 26 precomputed train/test kernels and a modelfile.
+The kernels and labels are obtained for dataset heart_scale by randomly dividing the data in 4:1 ratio. Using 80% of data for training
+and remaining 20% for testing.
+model_file is obtained using the following command:
+svm-train -s 0 -h 0 -m 400 -o 2.0 -a 26 -c 10.0 -l 1.0 -f 0 -j 1 -g 3 -k Example/Linear/Classification/PrecomputedKernels/kernelfile Example/Linear/Classification/PrecomputedKernels/y_train Example/Linear/Classification/PrecomputedKernels/model_file
+Note: Since only precomputed kernels are used, actual training data is not required. Only labels are needed
+In order to get the calssification accuracy use the following command:
+svm-predict Example/Linear/Classification/PrecomputedKernels/y_test Example/Linear/Classification/PrecomputedKernels/model_file Example/Linear/Classification/PrecomputedKernels/prediction  
+
+NOTE: All paths given in this README are relative to $PATH_TO_SMO-MKL directory 

@@ -1,0 +1,15 @@
+function toy_LpMKL()
+
+
+C = 1;
+n = 100;
+p = 2;
+f_p = zeros(n,1);lambda = 1;
+labels = sign(rand(n,1)-0.6);
+X = rand(n,2);
+for ith = 1:5
+    basekernels(:,:,ith) = X*(X');
+end
+[coefficients, model, obj] = train_amkl_LpMKL(labels, basekernels, p, f_p, lambda, C);
+
+end
